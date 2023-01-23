@@ -7,7 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 class BlogApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public String print(){
+		System.out.println("hellooo");
+		return "hellooo";
 	}
 
 }
