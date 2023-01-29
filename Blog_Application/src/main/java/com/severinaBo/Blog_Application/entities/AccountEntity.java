@@ -8,13 +8,14 @@ import javax.persistence.Id;
 
 @Entity
 public class AccountEntity {
- @Id
+    @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String firstName;
     private String lastName;
+    private String email;
 
- /*   public AccountEntity() {
+    public AccountEntity() {
     }
 
     public Long getId() {
@@ -56,5 +57,5 @@ public class AccountEntity {
         this.email = email;
     }
 
-    private String email;*/
+
 }

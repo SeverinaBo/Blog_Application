@@ -5,8 +5,13 @@ import com.severinaBo.Blog_Application.entities.AccountEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface AccountRepository extends JpaRepository<AccountEntity, Long> {
+import java.util.Optional;
 
-    /*AccountEntity getFirstName(String firstName);*/
+@Repository
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
+    boolean existsByEmail(String email);
+
+    Optional<Account> findByEmailAndPassword(String email, String password);
+/*    AccountEntity getFirstName(String firstName);*/
 }

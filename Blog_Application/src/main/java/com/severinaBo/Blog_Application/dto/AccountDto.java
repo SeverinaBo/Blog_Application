@@ -1,20 +1,13 @@
 package com.severinaBo.Blog_Application.dto;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
-@Getter
-@Setter
-@Entity
-
-public class Account {
+public class AccountDto {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -22,10 +15,9 @@ public class Account {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
+
+    //data trasnfer object - plain old java for easy memory storage acces
 
 
-    /*for later
-    private List<Role> roles;*/
+    }
 
-}
