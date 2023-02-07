@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>This is blog page</title>
 </head>
 <body>
+<div class="blogCard">
+    <h4 th:text="${blog.title}"></h4>
+    <div class="blogCardImg"></div>
+    <section>
+        <p>
+            <span class="label label-inline" th:text="#{content}"></span>
+            <span th:text="${post.content}"></span>
+        </p>
+        <p>
+            <span class="label label-inline" th:text="#{username}"></span>
+            <span th:text="${post.username}"></span>
+        </p>
+        <p>
+            <span class="label label-inline" th:text="#{createdAt}"></span>
+            <span th:text="${post.createdAt}"></span>
+        </p>
+        <p>
+            <span class="label label-inline" th:text="#{topicList}"></span>
+            <span th:text="${post.topicList}"></span>
+        </p>
+    </section>
+</div>
 
 </body>
 </html>
