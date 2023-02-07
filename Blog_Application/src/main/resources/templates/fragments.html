@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<head th:fragment="head" >
+  <meta charset="UTF-8">
+<!--  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link th:href="@{/public/resources/styles/styles.css}" rel="stylesheet" />-->
+  <script type="text/javascript" th:src="@{/public/resources/scripts/scripts.js}" defer></script>
+ <!-- <link th:href="@{/public/resources/images/favicon.png}" rel="shortcut icon">
+  <link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" />-->
+</head>
+
+<!--<nav th:fragment="navbar" class="nav"  id="navbar">
+  <div class="navContent">
+    <ul class="menu">
+      <li>
+        <a th:text="#{phones}" th:href="@{~/items(type='phone')}"></a>
+      </li>
+      <li>
+        <a th:text="#{tablets}" th:href="@{~/items(type='tablet')}"></a>
+      </li>
+      <li class="nav-item mx-4">
+        <a th:text="#{laptops}" th:href="@{~/items(type='laptop')}"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="navSpacer">
+            <span sec:authorize="isAuthenticated()"
+                  th:text="#{welcome.loggedInAccou(${#authentication.principal.email})}"></span>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropBtn">
+      <i class="fa-solid fa-account"></i>
+    </div>
+    <div class="dropdown-content">
+      <a th:href="@{~/account/login}" th:text="#{to.login}"></a>
+      <a th:href="@{~/account/registration}" th:text="#{to.register}"></a>
+      <button th:text="#{to.logout}" form="logoutForm"></button>
+    </div>
+    <form th:action="@{~/account/logout}" id="logoutForm" name="logoutForm" method="post" style="display: hidden"></form>
+  </div>-->
+
+<!--  <div class="dropdown">
+    <div class="dropBtn" th:text="#{lang.options}"></div>
+    <div class="dropdown-content">-->
+      <button onclick="setLanguage('LT');" th:text="#{lang.lt}"></button>
+      <button onclick="setLanguage('EN');" th:text="#{lang.en}"></button>
+   <!-- </div>
+  </div>-->
+<!--</nav>-->
+</body>
+</html>

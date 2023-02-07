@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
+<html xmlns:th="http://www.thymeleaf.org"
       lang="en">
-<head>
-  <meta charset="utf-8" />
+<head th:insert="fragments :: head">
+
   <title>Register new user</title>
 </head>
 <body>
-<h1>Registration</h1>
+
+<!--<nav th:replace="fragments :: navbar"></nav>-->
+
+<h1 th:text="#{welcome}"></h1>
 
 <div class="registration">
-  <form th:action="@{/accounts/registration}" >
-    <div>
-      <label for="firstName" th:text="first.name"></label>
+  <form th:action="@{/accounts/registration}" th:object="${accountToRegister}" method="post">
+
+    <div class="inputField">
+      <label for="firstName" th:text="#{first.name}"></label>
       <input type="text" name="firstName" id="firstName" >
 <!--
       <span th:if="${#fields.hasErrors('firstName')}" th:errorclass="error" th:errors="*{firstName}"></span>
@@ -20,19 +23,19 @@
     </div>
 
     <div class="inputField">
-      <label for="lastName" th:text="#{last.name}">Pavardė</label>
+      <label for="lastName" th:text="#{last.name}"></label>
       <input type="text" name="lastName" id="lastName" ><!--th:field="*{lastName}"-->
 <!--      <span th:if="${#fields.hasErrors('lastName')}" th:errorclass="error" th:errors="*{lastName}"></span>-->
     </div>
 
     <div class="inputField">
-      <label for="email" th:text="#{email}">Gmail</label>
+      <label for="email" th:text="#{email}"></label>
       <input type="email" name="email" id="email" ><!--th:field="*{email}">-->
 <!--      <span th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}"></span>-->
     </div>
 
     <div class="inputField">
-      <label for="password" th:text="#{password}">Slaptažodis</label>
+      <label for="password" th:text="#{password}"></label>
       <input type="password" name="password" id="password" ><!--th:field="*{password}"-->
      <!-- <span th:if="${#fields.hasErrors('password')}" th:errorclass="error" th:errors="*{password}"></span>-->
     </div>
