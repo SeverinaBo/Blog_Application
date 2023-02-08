@@ -11,11 +11,11 @@
   <form th:action="@{/users/login}" th:object="${userToLogIn}" method="post">
     <div class="inputField">
       <label for="email" th:text="#{email}"></label>
-      <input type="email" name="email" id="email" ><!--th:field="*{email}">-->
+      <input type="email" name="email" id="email" th:field="*{email}">
     </div>
     <div class="inputField">
       <label for="password" th:text="#{password}"></label>
-      <input type="password" name="password" id="password" ><!--th:field="*{password}">-->
+      <input type="password" name="password" id="password" th:field="*{password}">
     </div>
     <div class="action">
       <a href="#" class="link" th:text="#{forgot.password}"></a>

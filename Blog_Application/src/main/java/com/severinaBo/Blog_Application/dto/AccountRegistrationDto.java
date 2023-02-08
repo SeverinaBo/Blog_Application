@@ -12,18 +12,18 @@ import javax.validation.constraints.Size;
 public class AccountRegistrationDto {
 
 
-   @Size(min = 2, max = 60, message = "Name '${validatedValue}' must be between {min} and {max} characters")
+   //@Size(min = 2, max = 60, message = "Name '${validatedValue}' must be between {min} and {max} characters")
     private String firstName;
 
-    @Size(min = 2, max = 60, message = "{validation.lastName.size}")
+  //  @Size(min = 2, max = 60, message = "{validation.lastName.size}")
     private String lastName;
 
     @NotBlank
     @Email
     private String email;
 
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{2,8}$",
-            message = "{validation.password.requirements}")
+  /*  @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{2,8}$",
+            message = "{validation.password.requirements}")*/
     private String password;
 
 }

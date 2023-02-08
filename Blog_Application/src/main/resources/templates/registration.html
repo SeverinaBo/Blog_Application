@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:insert="fragments :: head">
 
   <title>Register new user</title>
@@ -11,12 +10,12 @@
 
 <h1 th:text="#{welcome}"></h1>
 
-<div class="registration">
+<div class="regForm">
   <form th:action="@{/accounts/registration}" th:object="${accountToRegister}" method="post">
 
     <div class="inputField">
       <label for="firstName" th:text="#{first.name}"></label>
-      <input type="text" name="firstName" id="firstName" >
+      <input type="text" name="firstName" id="firstName" th:field="*{firstName}">
 <!--
       <span th:if="${#fields.hasErrors('firstName')}" th:errorclass="error" th:errors="*{firstName}"></span>
 -->
@@ -24,19 +23,19 @@
 
     <div class="inputField">
       <label for="lastName" th:text="#{last.name}"></label>
-      <input type="text" name="lastName" id="lastName" ><!--th:field="*{lastName}"-->
+      <input type="text" name="lastName" id="lastName" th:field="*{lastName}">
 <!--      <span th:if="${#fields.hasErrors('lastName')}" th:errorclass="error" th:errors="*{lastName}"></span>-->
     </div>
 
     <div class="inputField">
       <label for="email" th:text="#{email}"></label>
-      <input type="email" name="email" id="email" ><!--th:field="*{email}">-->
+      <input type="email" name="email" id="email" th:field="*{email}">
 <!--      <span th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}"></span>-->
     </div>
 
     <div class="inputField">
       <label for="password" th:text="#{password}"></label>
-      <input type="password" name="password" id="password" ><!--th:field="*{password}"-->
+      <input type="password" name="password" id="password" th:field="*{password}" >
      <!-- <span th:if="${#fields.hasErrors('password')}" th:errorclass="error" th:errors="*{password}"></span>-->
     </div>
 

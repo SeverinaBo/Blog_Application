@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blog_Application" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blog_Application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Blog_Application/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Blog_Application/src/main/resources/languages" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blog_Application/src/main/resources/templates/registration.html" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

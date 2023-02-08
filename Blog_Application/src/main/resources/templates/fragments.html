@@ -4,13 +4,13 @@
 <body>
 <head th:fragment="head" >
   <meta charset="UTF-8">
-<!--  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <link th:href="@{/public/resources/styles/styles.css}" rel="stylesheet" />-->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<!--  <link th:href="@{/public/resources/styles/styles.css}" rel="stylesheet" />-->
   <script type="text/javascript" th:src="@{/public/resources/scripts/scripts.js}" defer></script>
- <!-- <link th:href="@{/public/resources/images/favicon.png}" rel="shortcut icon">
+  <link th:href="@{/public/resources/images/favicon.png}" rel="shortcut icon">
   <link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" />-->
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" />
 </head>
 
 <!--<nav th:fragment="navbar" class="nav"  id="navbar">
@@ -44,13 +44,13 @@
     <form th:action="@{~/account/logout}" id="logoutForm" name="logoutForm" method="post" style="display: hidden"></form>
   </div>-->
 
-<!--  <div class="dropdown">
+  <div class="dropdown">
     <div class="dropBtn" th:text="#{lang.options}"></div>
-    <div class="dropdown-content">-->
+    <div class="dropdown-content">
       <button onclick="setLanguage('LT');" th:text="#{lang.lt}"></button>
       <button onclick="setLanguage('EN');" th:text="#{lang.en}"></button>
-   <!-- </div>
-  </div>-->
+    </div>
+  </div>
 <!--</nav>-->
 </body>
 </html>
